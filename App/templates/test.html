@@ -1,0 +1,105 @@
+<html>
+{% extends 'base.html' %}
+{% block pagetitle %}
+AI Engine
+{% endblock pagetitle %}
+
+{% block body %}
+<div>
+    <div class="container">
+        <!-- For demo purpose -->
+        <div class="row mb-5 text-center text-white">
+            <div class="col-lg-10 mx-auto">
+                <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color: rgb(4, 54, 4);"><b>Check</b></h1>
+                <p class="lead" style="font-weight: 500;color: black;">Let AI Engine Will Help You To Detect Disease</p>
+            </div>
+        </div>
+        <!-- End -->
+        <div class="row">
+            <div class="col mx-auto">
+            </div>
+            <div class="col mx-auto">
+                <div class="p-5 bg-white shadow rounded-lg" style="height: 95%;">
+                    <img src="https://www.pngjoy.com/pngl/250/4840262_plants-png-indoors-tropical-plant-png-hd-png.png "
+                        height="300" alt="" width="200" class="d-block mx-auto mb-4 rounded-pill">
+
+                    <!-- Add camera capture feature -->
+                    <video id="video" class="mb-4" autoplay></video>
+                    <button id="captureButton" class="btn btn-outline-success">Take Photo</button>
+                    <!-- End camera capture -->
+
+                    <!-- Display captured image -->
+                    <canvas id="canvas" style="display: none;"></canvas>
+                    <img id="capturedImage" class="mb-4" alt="Captured Photo" style="display: none;">
+                    <!-- End captured image -->
+
+                    <!-- Options after capturing -->
+                    <div id="options" style="display: none;">
+                        <button id="cancelButton" class="btn btn-outline-danger mr-2">Cancel</button>
+                        <button id="retakeButton" class="btn btn-outline-primary mr-2">Retake</button>
+                        <button id="uploadButton" class="btn btn-outline-success">Upload</button>
+                    </div>
+                    <!-- End options -->
+                    
+                    <h6 class="text-center mb-4 text-muted">
+                        Simply take a photo of your plant's leaf, and see the magic of AI.
+                    </h6>
+                </div>
+            </div>
+            <div class="col mx-auto">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const video = document.getElementById('video');
+    const captureButton = document.getElementById('captureButton');
+    const canvas = document.getElementById('canvas');
+    const capturedImage = document.getElementById('capturedImage');
+    const options = document.getElementById('options');
+    const cancelButton = document.getElementById('cancelButton');
+    const retakeButton = document.getElementById('retakeButton');
+    const uploadButton = document.getElementById('uploadButton');
+    
+    // Access the user's camera
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function (stream) {
+            video.srcObject = stream;
+        })
+        .catch(function (error) {
+            console.error('Error accessing the camera:', error);
+        });
+    
+    // Capture a photo from the camera
+    captureButton.addEventListener('click', function () {
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+        capturedImage.src = canvas.toDataURL('image/jpeg');
+        capturedImage.style.display = 'block';
+        options.style.display = 'block';
+    });
+    
+    // Cancel and close camera
+    cancelButton.addEventListener('click', function () {
+        capturedImage.style.display = 'none';
+        options.style.display = 'none';
+    });
+    
+    // Retake photo
+    retakeButton.addEventListener('click', function () {
+        capturedImage.style.display = 'none';
+        options.style.display = 'none';
+    });
+    
+    // Upload photo (you can implement the upload functionality as needed)
+    uploadButton.addEventListener('click', function () {
+        // Implement the upload functionality here
+        // You can use capturedImage.src to access the captured photo
+        capturedImage.style.display = 'none';
+        options.style.display = 'none';
+    });
+</script>
+
+{% endblock body %}

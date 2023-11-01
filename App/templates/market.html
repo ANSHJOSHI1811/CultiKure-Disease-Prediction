@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block pagetitle %}
+Supplement Market
+{% endblock pagetitle %}
+
+{% block body %}
+
+<div class="container">
+    <div class="row mb-5 text-center text-white">
+        <div class="col-lg-10 mx-auto">
+            <h1 class="display-6" style="padding-top: 2%; font-weight: 400; color: rgb(4, 54, 4);"><b>Supplements</b></h1>
+        </div>
+    </div>
+    <div class="row">
+         <div class="col-lg-10 mx-auto">
+            <p class="lead" style="font-weight: 500; color: black;">Buy Supplements & Fertilizer at one place</p>
+        </div>
+        <div class="col-lg-2 mb-4">
+            <select id="filterDropdown" class="form-control">
+                <option value="all">All</option>
+                <option value="fertilizer">Fertilizer</option>
+                <option value="supplements">Supplements</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <!-- Your item listing code here (similar to the code you provided) -->
+        {% for index in range(supplement_name | length) %}
+            {% if index != 4 %}
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4" >
+                    <div class="p-3 bg-white shadow rounded-lg" style="height: 100%; width: 90%;">
+                        <center>
+                            {% if index in [3, 5, 7, 11, 15, 18, 20, 23, 24, 25, 28, 38] %}
+                            <h5>Fertilizer<b style="color: green;"> (Healthy):</b></h5>
+                            {% else %}
+                            <h5>Supplements<b style="color: red;"> (Diseased):</b></h5>
+                            {% endif %}
+                            <br>
+                            <img src={{supplement_image[index]}} width="100" height="150">
+                            <br>
+                            <br>
+                            <h6>For {{disease[index]}}</h6>
+                            <p>{{supplement_name[index]}}</p>
+                            <a target="_blank" href={{buy[index]}}>
+                                <button type="button" class="btn btn-light" style="background-image: linear-gradient(300deg, #ff5c4d, #ff4d4d); color: white; font-weight: 600;">Buy Product</button>
+                            </a>
+                        </center>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+    document.getElementById("filterDropdown").addEventListener("change", function () {
+        var selectedFilter = this.value;
+        var items = document.querySelectorAll(".col-lg-4");
+
+        items.forEach(function (item) {
+            var itemType = item.querySelector("h5").innerText.includes("Fertilizer") ? "fertilizer" : "supplements";
+
+            if (selectedFilter === "all" || itemType === selectedFilter) {
+                item.style.display = "block";
+            } else {
+                item.style.display = "none";
+            }
+        });
+    });
+</script>
+
+
+
+
+{% endblock body %}

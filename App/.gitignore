@@ -1,0 +1,62 @@
+# Virtual Environment
+venv/
+env/
+
+# Byte-compiled / optimized files
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+
+# Editor/IDE specific files
+.vscode/
+.idea/
+.vscode-server/
+.pycharm/
+
+# Dependency Management
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Database
+*.db
+
+# Environment Variables
+.env
+.venv
+
+# Configuration Files
+config.py
+
+# Secret Keys and Credentials
+*.secret
+*.key
+
+# Compiled assets
+*.css
+*.js
+*.js.map
+
+# __init__.py files
+**/__init__.py
+
+# User-specific files
+*.swp
+*.swo
+*.swn
+*~
+*.bak
+
+# Logs and Temporary Files
+*.log
+*.tmp
+*.temp
+
+# IDE/Editor Backup Files
+*~
+*.bak
+# Machine Learning Model Files
+*.pt

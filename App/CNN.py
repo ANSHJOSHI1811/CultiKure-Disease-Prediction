@@ -1,11 +1,6 @@
 import pandas as pd
 import torch.nn as nn
-# import torch
-# from your_model_module import YourModelClass
 
-# model = YourModelClass()
-# model.load_state_dict(torch.load('trained_model.pth'))
-# model.eval()
 class CNN(nn.Module):
     def __init__(self, K):
         super(CNN, self).__init__()

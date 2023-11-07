@@ -38,9 +38,12 @@ Plant diseases can significantly impact crop health and yield. Early detection a
 4.Run Web-App
   python app.py
 
-##Contributions
+## Contributions
 1.Ansh Joshi
+
 2.Bhavik Sharma
+
 3.Bhavika Darpe
+
 4.Devendra Singh Pawar
 

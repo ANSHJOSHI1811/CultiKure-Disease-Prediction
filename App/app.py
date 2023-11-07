@@ -39,6 +39,7 @@ def home_page():
 @app.route('/index')
 def ai_engine_page():
     return render_template('index.html')
+    #comment
 
 @app.route('/mobile-device')
 def mobile_device_detected_page():

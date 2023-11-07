@@ -1,4 +1,4 @@
-# CultiKure - Plant Disease Detection Web Application
+# CultiKure - Plant Disease Prediction Web Application
 
 CultiKure is a web-based tool designed to help users detect and address diseases in plants. By analyzing images of plant leaves, this application employs advanced AI technology to identify potential plant health issues, ensuring healthier crops and better yields.
 

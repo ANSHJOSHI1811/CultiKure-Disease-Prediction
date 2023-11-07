@@ -7,11 +7,18 @@ Plant Disease Detection
   body{
     overflow-x: hidden;
   }
- 
+  @media (max-width: 767px) {
+  #mba{
+    display: none;
+  }
+  #some{
+    margin-top: 20%;
+  }
+}
 </style>
 
 
-<div class="row mb-5 text-center text-white laptop">
+<div class="row mb-5 text-center text-white laptop" id="some">
     <div class="col-lg-10 mx-auto">
         <h3 class="display-5" style="padding-top: 10%;font-weight: 400;color: black;"><b>PLANT DISEASE DETECTION</b></h3>
         <p class="lead" style="font-weight: 500;color: black;font-size: 17px;">This AI Engine Will Help To Detect Disease From Following Fruites And Veggies</p>
@@ -20,12 +27,13 @@ Plant Disease Detection
 
 <center class="laptop">
     <a href="/index">
-    <button class = "btn btn-large" style="background-image: linear-gradient(270deg, #ff914d, #ff3131);padding: 1% 6%;border-radius: 100px;"><span style="color: white; font-family: sans-serif; font-size: 20px;">Start  </span></button>
+    <button class = "btn btn-large" style="background-image: linear-gradient(270deg, #ff914d, #ff3131);padding: 1% 6%;border-radius: 100px;">
+      <span style="color: white; font-family: sans-serif; font-size: 20px;">Start  </span></button>
 </a>
 
 </center>
 
-<div class="container mt-5">
+<div class="container mt-5" id="mba">
   <div class="row ">
       <div class="col-3">
           <div class="rounded p-3  shadow border text-center" style="width: 85%"><img src="../static/uploads/2.png" style="width: 100%;"  alt="" srcset=""></div>

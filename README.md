@@ -34,19 +34,19 @@ Plant diseases can significantly impact crop health and yield. Early detection a
 2. Install Python Packages
     ```shell
    pip install -r requirements.txt
-3.Activate .venv 
+3.Activate Virtual-Environment (.venv )
  ```shell
-   ./activate.bat
-4.Run Web-App
+    ./activate.bat
+   ```
+4.Run App.py File 
  ```shell
   python app.py
-
+```
 ## Contributions
-1.Ansh Joshi
+1. [Ansh Joshi](https://github.com/ANSHJOSHI1811)
+2. [Bhavik Sharma](https://github.com/Bhavik-1025)
+3. [Bhavika Darpe](https://github.com/bhavika372)
+4. [Devendra Singh Pawar](https://github.com/devendrap08)
 
-2.Bhavik Sharma
 
-3.Bhavika Darpe
-
-4.Devendra Singh Pawar
 

@@ -42,6 +42,9 @@ Plant diseases can significantly impact crop health and yield. Early detection a
  ```shell
   python app.py
 ```
+## Video-Demonstration
+[Video.mp4](https://youtu.be/cbCVkRAjhgE)
+
 ## Contributions
 1. [Ansh Joshi](https://github.com/ANSHJOSHI1811)
 2. [Bhavik Sharma](https://github.com/Bhavik-1025)

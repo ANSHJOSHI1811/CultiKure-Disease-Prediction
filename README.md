@@ -37,10 +37,15 @@ Plant diseases can significantly impact crop health and yield. Early detection a
 3.Activate Virtual-Environment (.venv )
  ```shell
     ./activate.bat
-   ```
-4.Run App.py File 
- ```shell
-  python app.py
+ ```
+4.Activate the virtual environment
+```shell
+source ./venv/bin/activate
+```
+5.Run the Django server:
+   ```shell
+python manage.py runserver   
+
 ```
 ## Video-Demonstration
 [Video.mp4](https://youtu.be/cbCVkRAjhgE)
